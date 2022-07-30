@@ -1,0 +1,21 @@
+{
+  "variants": {
+    "":[
+      {
+      "model": "loftedmod:block/lofted_fern_1"
+      },
+      {
+      "model": "loftedmod:block/lofted_fern_2"
+      },
+      {
+        "model": "loftedmod:block/lofted_fern_3"
+      },
+      {
+        "model": "loftedmod:block/lofted_fern_4"
+      },
+      {
+        "model": "loftedmod:block/lofted_fern_5"
+      }
+      ]
+  }
+}

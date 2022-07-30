@@ -1,0 +1,12 @@
+{
+  "type": "loftedmod:lofteddim",
+  "generator": {
+    "biome_source": {
+      "type": "minecraft:fixed",
+      "biome": "loftedmod:lofted_wilderness"
+    },
+    "settings": "loftedmod:lofteddim_settings",
+    "type": "minecraft:noise",
+    "seed": -485105919
+  }
+}
