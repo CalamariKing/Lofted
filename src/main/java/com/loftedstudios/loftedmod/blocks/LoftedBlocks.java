@@ -1,6 +1,7 @@
 package com.loftedstudios.loftedmod.blocks;
 
 import com.loftedstudios.loftedmod.LoftedModMain;
+import com.loftedstudios.loftedmod.blocks.custom.BranchBlock;
 import com.loftedstudios.loftedmod.blocks.custom.LoftedFernBlock;
 import com.loftedstudios.loftedmod.blocks.custom.LoftedGrassBlock;
 import com.loftedstudios.loftedmod.item.LoftedItemGroup;
@@ -67,10 +68,19 @@ public class LoftedBlocks {
             new LoftedGrassBlock(AbstractBlock.Settings.copy(Blocks.GRASS_BLOCK)),
             LoftedItemGroup.LOFTED_ITEMGROUP);
 
+    public static final Block FEYWOOD_BRANCH = registerBlock("feywood_branch", new BranchBlock(0.5f, FabricBlockSettings.of(Material.LEAVES).strength(0.5f, 0.2f).mapColor(MapColor.BROWN)), LoftedItemGroup.LOFTED_ITEMGROUP);
+
+    public static final Block COPPER_SHINGLES = registerBlock("copper_shingles",
+            new StairsBlock(Blocks.WAXED_COPPER_BLOCK.getDefaultState(), FabricBlockSettings.of(Material.METAL).strength(3.0f, 6.0f).requiresTool().mapColor(MapColor.ORANGE)),
+            LoftedItemGroup.LOFTED_ITEMGROUP);
+
     // Vegetation
     public static final Block LOFTED_FERN = registerBlock("lofted_fern",
             new LoftedFernBlock(AbstractBlock.Settings.of(Material.REPLACEABLE_PLANT).noCollision().breakInstantly().sounds(BlockSoundGroup.GRASS)), ItemGroup.DECORATIONS);
 
+    // Wood
+    public static final Block FEYWOOD_LOG = registerBlock("feywood_log",
+            new PillarBlock(FabricBlockSettings.copy(Blocks.OAK_LOG).strength(4.0f).requiresTool()), LoftedItemGroup.LOFTED_ITEMGROUP);
 
 
 

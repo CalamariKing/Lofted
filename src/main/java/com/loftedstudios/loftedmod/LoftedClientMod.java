@@ -11,6 +11,7 @@ public class LoftedClientMod implements ClientModInitializer {
     public void onInitializeClient() {
         BlockRenderLayerMap.INSTANCE.putBlock(LoftedBlocks.LOFTED_GRASS, RenderLayer.getCutoutMipped());
         BlockRenderLayerMap.INSTANCE.putBlock(LoftedBlocks.LOFTED_FERN, RenderLayer.getCutout());
+        BlockRenderLayerMap.INSTANCE.putBlock(LoftedBlocks.FEYWOOD_BRANCH, RenderLayer.getCutout());
 
 
         LoftedColourProviders.registerColourProviders();

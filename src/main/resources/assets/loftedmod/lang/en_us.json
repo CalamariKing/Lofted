@@ -11,8 +11,12 @@
   "block.loftedmod.minstone_stairs": "Minstone Stairs",
   "block.loftedmod.minstone_slab": "Minstone Slab",
 
+  "block.loftedmod.copper_shingles": "Copper Shingles",
+
   "block.loftedmod.lofted_grass": "Lofted Grass",
   "block.loftedmod.lofted_fern": "Lofted Fern",
+  "block.loftedmod.feywood_branch": "Feywood Branch",
+  "block.loftedmod.feywood_log": "Feywood Log",
 
   "itemGroup.loftedmod.lofted_itemgroup": "Lofted"
 }

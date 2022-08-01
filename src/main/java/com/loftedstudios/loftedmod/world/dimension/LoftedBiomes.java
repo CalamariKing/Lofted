@@ -48,6 +48,7 @@ public class LoftedBiomes {
                 .generationSettings(createGenerationSettings(getLoftedCarvers(), mergeFeatures(
                         generateOres(),
                         Map.of(GenerationStep.Feature.LOCAL_MODIFICATIONS, List.of(
+                                ModPlacedFeatures.LAKE_WATER_SURFACE
 
                         ),
                         GenerationStep.Feature.FLUID_SPRINGS, List.of(
