@@ -1,13 +1,16 @@
 package com.loftedstudios.loftedmod;
 
 import com.loftedstudios.loftedmod.blocks.LoftedBlocks;
+import com.loftedstudios.loftedmod.entities.ModEntityTypes;
 import com.loftedstudios.loftedmod.world.dimension.LoftedBiomes;
 import com.loftedstudios.loftedmod.world.dimension.LoftedDimension;
 import com.loftedstudios.loftedmod.world.feature.ModConfiguredFeatures;
 import com.loftedstudios.loftedmod.world.feature.ModPlacedFeatures;
 import net.fabricmc.api.ModInitializer;
+import net.fabricmc.fabric.api.object.builder.v1.entity.FabricDefaultAttributeRegistry;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import software.bernie.geckolib3.GeckoLib;
 
 public class LoftedModMain implements ModInitializer {
 	// This logger is used to write text to the console and the log file.
@@ -25,6 +28,10 @@ public class LoftedModMain implements ModInitializer {
 		ModPlacedFeatures.registerPlacedFeatures();
 		LoftedBlocks.registerModBlocks();
 		LoftedBiomes.registerBiomes();
+		GeckoLib.initialize();
 		LoftedDimension.register();
+
+
 	}
+
 }

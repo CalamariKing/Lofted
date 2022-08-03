@@ -3,6 +3,7 @@ package com.loftedstudios.loftedmod.util;
 
 import com.loftedstudios.loftedmod.LoftedModMain;
 import net.minecraft.block.Block;
+import net.minecraft.item.Items;
 import net.minecraft.tag.Tag;
 import net.minecraft.tag.TagKey;
 import net.minecraft.util.Identifier;
