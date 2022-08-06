@@ -2,6 +2,7 @@ package com.loftedstudios.loftedmod;
 
 import com.loftedstudios.loftedmod.blocks.LoftedBlocks;
 import com.loftedstudios.loftedmod.entities.ModEntityTypes;
+import com.loftedstudios.loftedmod.item.ModItems;
 import com.loftedstudios.loftedmod.world.dimension.LoftedBiomes;
 import com.loftedstudios.loftedmod.world.dimension.LoftedDimension;
 import com.loftedstudios.loftedmod.world.feature.ModConfiguredFeatures;
@@ -26,6 +27,7 @@ public class LoftedModMain implements ModInitializer {
 		// Proceed with mild caution.
 		ModConfiguredFeatures.registerConfiguredFeatures();
 		ModPlacedFeatures.registerPlacedFeatures();
+		ModItems.registerModItems();
 		LoftedBlocks.registerModBlocks();
 		LoftedBiomes.registerBiomes();
 		GeckoLib.initialize();

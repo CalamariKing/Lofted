@@ -18,5 +18,7 @@
   "block.loftedmod.feywood_branch": "Feywood Branch",
   "block.loftedmod.feywood_log": "Feywood Log",
 
-  "itemGroup.loftedmod.lofted_itemgroup": "Lofted"
+  "itemGroup.loftedmod.lofted_itemgroup": "Lofted",
+
+  "loftedmod.blimp_destroy": "Blimp Destroyed"
 }

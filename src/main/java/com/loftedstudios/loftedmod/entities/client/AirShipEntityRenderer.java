@@ -1,5 +1,8 @@
 package com.loftedstudios.loftedmod.entities.client;
 
+import com.google.common.collect.ImmutableMap;
+import com.ibm.icu.impl.Pair;
+import com.loftedstudios.loftedmod.LoftedModMain;
 import com.loftedstudios.loftedmod.entities.AirShipEntity;
 import net.minecraft.client.MinecraftClient;
 import net.minecraft.client.render.OverlayTexture;
@@ -22,12 +25,20 @@ import software.bernie.geckolib3.model.provider.data.EntityModelData;
 import software.bernie.geckolib3.renderers.geo.IGeoRenderer;
 
 import java.util.Collections;
+import java.util.Map;
+import java.util.stream.Stream;
 
 public class AirShipEntityRenderer extends EntityRenderer<AirShipEntity> implements IGeoRenderer<AirShipEntity> {
     private final AnimatedGeoModel<AirShipEntity> modelProvider;
+    private final Map textures;
     public AirShipEntityRenderer(EntityRendererFactory.Context ctx) {
         super(ctx);
         this.modelProvider = new AirShipEntityModel();
+        this.textures = (Map) Stream.of(AirShipEntity.Type.values()).collect(ImmutableMap.toImmutableMap((type) -> {
+            return type;
+        }, (type) -> {
+            return Pair.of(new Identifier(LoftedModMain.MOD_ID, "textures/entity/airship/" + type.getName() + "_airship.png"), new AirShipEntityModel());
+        }));
     }
 
     @Override
@@ -71,7 +82,7 @@ public class AirShipEntityRenderer extends EntityRenderer<AirShipEntity> impleme
 
     @Override
     public Identifier getTextureLocation(AirShipEntity instance) {
-        return this.modelProvider.getTextureLocation(instance);
+        return (Identifier)((Pair)this.textures.get(instance.getAirShipType())).first;
     }
 
     public static int getPackedOverlay(Entity livingEntityIn, float uIn) {

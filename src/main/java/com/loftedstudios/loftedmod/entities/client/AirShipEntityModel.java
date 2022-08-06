@@ -15,7 +15,7 @@ public class AirShipEntityModel extends AnimatedGeoModel<AirShipEntity> {
 
     @Override
     public Identifier getTextureLocation(AirShipEntity object) {
-        return new Identifier(LoftedModMain.MOD_ID, "textures/entity/airship_red.png");
+        return new Identifier(LoftedModMain.MOD_ID, "textures/entity/red_airship.png");
     }
 
     @Override

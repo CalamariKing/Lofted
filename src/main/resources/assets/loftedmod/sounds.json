@@ -1,0 +1,8 @@
+{
+  "blimp_destroy": {
+    "subtitle": "loftedmod.blimp_destroy",
+    "sounds": [
+      "loftedmod:blimp_destroy"
+    ]
+  }
+}
