@@ -1,0 +1,13 @@
+{
+  "type": "minecraft:crafting_shapeless",
+  "group": "planks",
+  "ingredients": [
+    {
+      "tag": "loftedmod:feywood_log"
+    }
+  ],
+  "result": {
+    "item": "loftedmod:feywood_planks",
+    "count": 4
+  }
+}

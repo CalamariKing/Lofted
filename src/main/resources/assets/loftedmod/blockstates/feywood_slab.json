@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "loftedmod:block/feywood_slab"
+    },
+    "type=double": {
+      "model": "loftedmod:block/feywood_planks"
+    },
+    "type=top": {
+      "model": "loftedmod:block/feywood_slab_top"
+    }
+  }
+}

@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "loftedmod:block/feywood_planks",
+    "top": "loftedmod:block/feywood_planks",
+    "side": "loftedmod:block/feywood_planks"
+  }
+}

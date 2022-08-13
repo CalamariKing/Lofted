@@ -1,0 +1,15 @@
+{
+  "replace": false,
+  "values": [
+    "loftedmod:feywood_log",
+    "loftedmod:feywood_wood",
+    "loftedmod:stripped_feywood_log",
+    "loftedmod:stripped_feywood_wood",
+    "loftedmod:feywood_planks",
+    "loftedmod:feywood_stairs",
+    "loftedmod:feywood_slab",
+    "loftedmod:feywood_fence",
+    "loftedmod:feywood_fence_gate"
+
+  ]
+}

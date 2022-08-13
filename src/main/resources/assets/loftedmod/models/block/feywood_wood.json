@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "loftedmod:block/feywood_log",
+    "side": "loftedmod:block/feywood_log"
+  }
+}

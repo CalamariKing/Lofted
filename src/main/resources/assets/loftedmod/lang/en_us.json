@@ -1,0 +1,33 @@
+{
+  "block.loftedmod.minstone": "Minstone",
+  "block.loftedmod.cobbled_minstone": "Cobbled Minstone",
+  "block.loftedmod.minstone_coal_ore": "Minstone Coal Ore",
+  "block.loftedmod.minstone_copper_ore": "Minstone Copper Ore",
+  "block.loftedmod.minstone_iron_ore": "Minstone Iron Ore",
+  "block.loftedmod.minstone_gold_ore": "Minstone Gold Ore",
+  "block.loftedmod.minstone_diamond_ore": "Minstone Diamond Ore",
+  "block.loftedmod.minstone_vibrantite_ore": "Minstone Vibrantite Ore",
+
+  "block.loftedmod.minstone_stairs": "Minstone Stairs",
+  "block.loftedmod.minstone_slab": "Minstone Slab",
+
+  "block.loftedmod.copper_shingles": "Copper Shingles",
+
+  "block.loftedmod.lofted_grass": "Lofted Grass",
+  "block.loftedmod.lofted_fern": "Lofted Fern",
+  "block.loftedmod.feywood_branch": "Feywood Branch",
+  "block.loftedmod.feywood_log": "Feywood Log",
+  "block.loftedmod.feywood_wood": "Feywood Wood",
+  "block.loftedmod.stripped_feywood_log": "Stripped Feywood Log",
+  "block.loftedmod.stripped_feywood_wood": "Stripped Feywood Wood",
+  "block.loftedmod.feywood_planks": "Feywood Planks",
+  "block.loftedmod.feywood_stairs": "Feywood Stairs",
+  "block.loftedmod.feywood_slab": "Feywood Slab",
+  "block.loftedmod.feywood_fence": "Feywood Fence",
+  "block.loftedmod.feywood_fence_gate": "Feywood Fence Gate",
+
+  "itemGroup.loftedmod.lofted_itemgroup": "Lofted",
+
+  "loftedmod.blimp_destroy": "Blimp Destroyed",
+  "loftedmod.blimp_creak": "Blimp Creaks"
+}

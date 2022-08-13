@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "group": "bark",
+  "pattern": [
+    "##",
+    "##"
+  ],
+  "key": {
+    "#": {
+      "item": "loftedmod:feywood_log"
+    }
+  },
+  "result": {
+    "item": "loftedmod:feywood_wood",
+    "count": 3
+  }
+}
