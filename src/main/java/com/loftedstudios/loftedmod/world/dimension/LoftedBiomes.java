@@ -55,8 +55,8 @@ public class LoftedBiomes {
 
                         ),
                         GenerationStep.Feature.VEGETAL_DECORATION, List.of(
-                                        ModPlacedFeatures.PATCH_LOFTED_GRASS
-
+                                        ModPlacedFeatures.PATCH_LOFTED_GRASS,
+                                        ModPlacedFeatures.FLOWER_WILDERNESS
                         )))))
                 .spawnSettings(createSpawnSettings(
                         Map.of(

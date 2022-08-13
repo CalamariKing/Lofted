@@ -25,6 +25,9 @@
   "block.loftedmod.feywood_slab": "Feywood Slab",
   "block.loftedmod.feywood_fence": "Feywood Fence",
   "block.loftedmod.feywood_fence_gate": "Feywood Fence Gate",
+  "block.loftedmod.feywood_button": "Feywood Button",
+  "block.loftedmod.feywood_pressure_plate": "Feywood Pressure Plate",
+  "block.loftedmod.feywood_sign": "Feywood Sign",
 
   "itemGroup.loftedmod.lofted_itemgroup": "Lofted",
 

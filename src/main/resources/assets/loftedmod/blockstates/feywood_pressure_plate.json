@@ -1,0 +1,10 @@
+{
+  "variants": {
+    "powered=false": {
+      "model": "loftedmod:block/feywood_pressure_plate"
+    },
+    "powered=true": {
+      "model": "loftedmod:block/feywood_pressure_plate_down"
+    }
+  }
+}

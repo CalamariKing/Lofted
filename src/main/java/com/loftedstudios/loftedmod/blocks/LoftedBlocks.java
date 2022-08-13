@@ -4,6 +4,7 @@ import com.loftedstudios.loftedmod.LoftedModMain;
 import com.loftedstudios.loftedmod.blocks.custom.BranchBlock;
 import com.loftedstudios.loftedmod.blocks.custom.LoftedFernBlock;
 import com.loftedstudios.loftedmod.blocks.custom.LoftedGrassBlock;
+import com.loftedstudios.loftedmod.blocks.entity.ModSignTypes;
 import com.loftedstudios.loftedmod.item.LoftedItemGroup;
 import net.fabricmc.fabric.api.item.v1.FabricItemSettings;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
@@ -87,8 +88,6 @@ public class LoftedBlocks {
 
     public static final Block STRIPPED_FEYWOOD_WOOD= registerBlock("stripped_feywood_wood", new PillarBlock(FabricBlockSettings.copy(Blocks.STRIPPED_OAK_WOOD).strength(4.0f).requiresTool()), LoftedItemGroup.LOFTED_ITEMGROUP);
 
-
-
     public static final Block FEYWOOD_PLANKS = registerBlock("feywood_planks", new Block(AbstractBlock.Settings.of(Material.WOOD, MapColor.OAK_TAN).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)), LoftedItemGroup.LOFTED_ITEMGROUP);
 
     public static final Block FEYWOOD_STAIRS = registerBlock("feywood_stairs", new StairsBlock(FEYWOOD_PLANKS.getDefaultState(), AbstractBlock.Settings.copy(FEYWOOD_PLANKS)), LoftedItemGroup.LOFTED_ITEMGROUP);
@@ -98,6 +97,16 @@ public class LoftedBlocks {
     public static final Block FEYWOOD_FENCE = registerBlock("feywood_fence", new FenceBlock(AbstractBlock.Settings.of(Material.WOOD, FEYWOOD_PLANKS.getDefaultMapColor()).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)), LoftedItemGroup.LOFTED_ITEMGROUP);
 
     public static final Block FEYWOOD_FENCE_GATE = registerBlock("feywood_fence_gate", new FenceGateBlock(AbstractBlock.Settings.of(Material.WOOD, FEYWOOD_PLANKS.getDefaultMapColor()).strength(2.0f, 3.0f).sounds(BlockSoundGroup.WOOD)), LoftedItemGroup.LOFTED_ITEMGROUP);
+
+    public static final Block FEYWOOD_BUTTON = registerBlock("feywood_button", new WoodenButtonBlock(AbstractBlock.Settings.of(Material.DECORATION).noCollision().strength(0.5f).sounds(BlockSoundGroup.WOOD)), LoftedItemGroup.LOFTED_ITEMGROUP);
+
+    public static final Block FEYWOOD_PRESSURE_PLATE = registerBlock("feywood_pressure_plate", new PressurePlateBlock(PressurePlateBlock.ActivationRule.EVERYTHING, AbstractBlock.Settings.of(Material.WOOD, FEYWOOD_PLANKS.getDefaultMapColor()).noCollision().strength(0.5f).sounds(BlockSoundGroup.WOOD)), LoftedItemGroup.LOFTED_ITEMGROUP);
+
+    public static final Block FEYWOOD_WALL_SIGN_BLOCK = registerBlockWithoutBlockItem("feywood_wall_sign",
+            new WallSignBlock(FabricBlockSettings.copy(Blocks.OAK_WALL_SIGN), ModSignTypes.FEYWOOD), LoftedItemGroup.LOFTED_ITEMGROUP);
+
+    public static final Block FEYWOOD_SIGN_BLOCK = registerBlockWithoutBlockItem("feywood_sign",
+            new SignBlock(FabricBlockSettings.copy(Blocks.OAK_SIGN), ModSignTypes.FEYWOOD), LoftedItemGroup.LOFTED_ITEMGROUP);
 
 
 
@@ -109,10 +118,17 @@ public class LoftedBlocks {
                 new BlockItem(block, new FabricItemSettings().group(group)));
     }
 
+
+
     private static Block registerBlock(String name, Block block, ItemGroup group) {
         registerBlockItem(name, block, group);
         return Registry.register(Registry.BLOCK, new Identifier(LoftedModMain.MOD_ID, name), block);
     }
+
+    private static Block registerBlockWithoutBlockItem(String name, Block block, ItemGroup group) {
+        return Registry.register(Registry.BLOCK, new Identifier(LoftedModMain.MOD_ID, name), block);
+    }
+
 
 
 

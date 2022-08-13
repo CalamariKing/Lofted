@@ -11,15 +11,18 @@ import net.minecraft.structure.rule.RuleTest;
 import net.minecraft.structure.rule.TagMatchRuleTest;
 import net.minecraft.tag.BlockTags;
 import net.minecraft.util.collection.DataPool;
+import net.minecraft.util.dynamic.Range;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.VerticalSurfaceType;
 import net.minecraft.util.math.intprovider.ConstantIntProvider;
 import net.minecraft.util.math.intprovider.UniformIntProvider;
+import net.minecraft.util.math.noise.DoublePerlinNoiseSampler;
 import net.minecraft.util.registry.RegistryEntry;
 import net.minecraft.world.gen.blockpredicate.BlockPredicate;
 import net.minecraft.world.gen.feature.*;
 import net.minecraft.world.gen.placementmodifier.PlacementModifier;
 import net.minecraft.world.gen.stateprovider.BlockStateProvider;
+import net.minecraft.world.gen.stateprovider.DualNoiseBlockStateProvider;
 import net.minecraft.world.gen.stateprovider.WeightedBlockStateProvider;
 
 import java.util.List;
@@ -31,6 +34,8 @@ public class ModConfiguredFeatures {
 
     // Vegetation
     public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> PATCH_LOFTED_GRASS = ConfiguredFeatures.register("patch_lofted_grass", Feature.RANDOM_PATCH, createRandomPatchFeatureConfig(BlockStateProvider.of(LoftedBlocks.LOFTED_FERN), 32));
+    public static final RegistryEntry<ConfiguredFeature<RandomPatchFeatureConfig, ?>> FLOWER_WILDERNESS = ConfiguredFeatures.register("flower_wilderness", Feature.FLOWER, new RandomPatchFeatureConfig(96, 6, 2, PlacedFeatures.createEntry(Feature.SIMPLE_BLOCK, new SimpleBlockFeatureConfig(new DualNoiseBlockStateProvider(new Range<Integer>(1, 3), new DoublePerlinNoiseSampler.NoiseParameters(-3, 1.0, new double[0]), 1.0f, 2345L, new DoublePerlinNoiseSampler.NoiseParameters(-3, 1.0, new double[0]), 1.0f, List.of(Blocks.CORNFLOWER.getDefaultState(), Blocks.POPPY.getDefaultState(), Blocks.POPPY.getDefaultState(), Blocks.DANDELION.getDefaultState(), Blocks.AZURE_BLUET.getDefaultState(), Blocks.OXEYE_DAISY.getDefaultState(), Blocks.ALLIUM.getDefaultState()))))));
+
 
     // Ores
     public static final RegistryEntry<ConfiguredFeature<OreFeatureConfig, ?>> ORE_STONE = ConfiguredFeatures.register("ore_stone", Feature.ORE, oreConfig(Blocks.STONE, 45));

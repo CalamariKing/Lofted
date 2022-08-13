@@ -19,6 +19,8 @@ public class ModPlacedFeatures {
 
     // Vegetation
     public static final RegistryEntry<PlacedFeature> PATCH_LOFTED_GRASS = register("patch_lofted_grass", ModConfiguredFeatures.PATCH_LOFTED_GRASS, CountPlacementModifier.of(10), SquarePlacementModifier.of(), HeightRangePlacementModifier.uniform(YOffset.aboveBottom(3), YOffset.belowTop(0)), HeightmapPlacementModifier.of(Heightmap.Type.MOTION_BLOCKING), BiomePlacementModifier.of());
+    public static final RegistryEntry<PlacedFeature> FLOWER_WILDERNESS = PlacedFeatures.register("flower_wilderness", ModConfiguredFeatures.FLOWER_WILDERNESS, SquarePlacementModifier.of(), PlacedFeatures.MOTION_BLOCKING_HEIGHTMAP, BiomePlacementModifier.of());
+
 
     //Ores
     public static final RegistryEntry<PlacedFeature> ORE_STONE = PlacedFeatures.register("ore_stone", ModConfiguredFeatures.ORE_STONE, CountPlacementModifier.of(40), SquarePlacementModifier.of(), HeightRangePlacementModifier.trapezoid(YOffset.aboveBottom(48), YOffset.aboveBottom(384)), BiomePlacementModifier.of());

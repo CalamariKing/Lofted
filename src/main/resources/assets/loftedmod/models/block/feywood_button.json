@@ -1,0 +1,6 @@
+{
+  "parent": "minecraft:block/button",
+  "textures": {
+    "texture": "loftedmod:block/feywood_planks"
+  }
+}

@@ -49,7 +49,7 @@ public class BranchBlock extends ConnectingBlock {
         return this.canConnectToBranch(state);
     }
     private boolean canConnectToBranch(BlockState state) {
-        return state.getBlock() == LoftedBlocks.FEYWOOD_BRANCH || state.isIn(BlockTags.LEAVES) || state.isIn(BlockTags.LOGS);
+        return state.getBlock() == LoftedBlocks.FEYWOOD_BRANCH || state.isIn(BlockTags.LEAVES) || state.isIn(BlockTags.LOGS) || state.isOf(LoftedBlocks.LOFTED_GRASS) || state.isOf(LoftedBlocks.MINSTONE);
     }
 
     private boolean canConnectToLeaves(BlockState state) {
