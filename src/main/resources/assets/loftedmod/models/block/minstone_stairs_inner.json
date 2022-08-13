@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/inner_stairs",
-  "textures": {
-    "bottom": "loftedmod:block/minstone",
-    "top": "loftedmod:block/minstone",
-    "side": "loftedmod:block/minstone"
-  }
-}

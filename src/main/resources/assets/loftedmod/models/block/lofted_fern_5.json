@@ -1,6 +1,0 @@
-{
-  "parent": "minecraft:block/tinted_cross",
-  "textures": {
-    "cross": "loftedmod:block/lofted_fern_5"
-  }
-}
