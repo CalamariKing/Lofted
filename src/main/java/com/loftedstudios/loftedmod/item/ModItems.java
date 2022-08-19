@@ -18,6 +18,8 @@ public class ModItems {
 
     public static final Item FEYWOOD_SIGN = new SignItem(new FabricItemSettings().group(LoftedItemGroup.LOFTED_ITEMGROUP).maxCount(16), LoftedBlocks.FEYWOOD_SIGN_BLOCK, LoftedBlocks.FEYWOOD_WALL_SIGN_BLOCK);
 
+    public static final Item VIBRANTITE_CHUNK = new Item(new FabricItemSettings().group(LoftedItemGroup.LOFTED_ITEMGROUP).maxCount(64));
+
 
 
     public static void registerModItems() {
@@ -25,7 +27,10 @@ public class ModItems {
         Registry.register(Registry.ITEM, new Identifier(LoftedModMain.MOD_ID, "yellow_airship"), YELLOW_AIRSHIP);
         Registry.register(Registry.ITEM, new Identifier(LoftedModMain.MOD_ID, "black_airship"), BLACK_AIRSHIP);
         Registry.register(Registry.ITEM, new Identifier(LoftedModMain.MOD_ID, "blue_airship"), BLUE_AIRSHIP);
+
         Registry.register(Registry.ITEM, new Identifier(LoftedModMain.MOD_ID, "feywood_sign"), FEYWOOD_SIGN);
+
+        Registry.register(Registry.ITEM, new Identifier(LoftedModMain.MOD_ID, "vibrantite_chunk"), VIBRANTITE_CHUNK);
         LoftedModMain.LOGGER.info("Registering Mod Items for " + LoftedModMain.MOD_ID);
     }
 }

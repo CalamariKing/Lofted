@@ -3,17 +3,23 @@ package com.loftedstudios.loftedmod.blocks.custom;
 import com.loftedstudios.loftedmod.blocks.LoftedBlocks;
 import net.minecraft.block.*;
 import net.minecraft.entity.ai.pathing.NavigationType;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Property;
 import net.minecraft.tag.BlockTags;
+import net.minecraft.util.BlockMirror;
+import net.minecraft.util.BlockRotation;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
+import net.minecraft.util.math.DirectionTransformation;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import net.minecraft.world.WorldAccess;
+
+import java.util.Random;
 
 public class BranchBlock extends ConnectingBlock {
     public static final BooleanProperty LEAVES_NORTH = BooleanProperty.of("leaves_north");
@@ -32,6 +38,8 @@ public class BranchBlock extends ConnectingBlock {
 
     public BranchBlock(float radius, Settings settings) {
         super(0.5f, settings);
+        this.setDefaultState((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)((BlockState)(BlockState)(BlockState)this.stateManager.getDefaultState()).with(NORTH, false)).with(EAST, false)).with(SOUTH, false)).with(WEST, false)).with(UP, false).with(DOWN, false));
+
     }
 
     @Override
@@ -42,6 +50,35 @@ public class BranchBlock extends ConnectingBlock {
     public boolean canLeavesConnect(BlockState state, Direction dir) {
         Block block = state.getBlock();
         return this.canConnectToLeaves(state);
+    }
+
+    @Override
+    public BlockState rotate(BlockState state, BlockRotation rotation) {
+        switch (rotation) {
+            case CLOCKWISE_180: {
+                return (BlockState) ((BlockState) ((BlockState) ((BlockState) state.with(NORTH, state.get(SOUTH))).with(EAST, state.get(WEST))).with(SOUTH, state.get(NORTH))).with(WEST, state.get(EAST));
+            }
+            case COUNTERCLOCKWISE_90: {
+                return (BlockState) ((BlockState) ((BlockState) ((BlockState) state.with(NORTH, state.get(EAST))).with(EAST, state.get(SOUTH))).with(SOUTH, state.get(WEST))).with(WEST, state.get(NORTH));
+            }
+            case CLOCKWISE_90: {
+                return (BlockState) ((BlockState) ((BlockState) ((BlockState) state.with(NORTH, state.get(WEST))).with(EAST, state.get(NORTH))).with(SOUTH, state.get(EAST))).with(WEST, state.get(SOUTH));
+            }
+        }
+        return state;
+    }
+
+    @Override
+    public BlockState mirror(BlockState state, BlockMirror mirror) {
+        switch (mirror) {
+            case LEFT_RIGHT: {
+                return (BlockState)((BlockState)state.with(NORTH, state.get(SOUTH))).with(SOUTH, state.get(NORTH));
+            }
+            case FRONT_BACK: {
+                return (BlockState)((BlockState)state.with(EAST, state.get(WEST))).with(WEST, state.get(EAST));
+            }
+        }
+        return super.mirror(state, mirror);
     }
 
     public boolean canConnect(BlockState state, Direction dir) {
@@ -55,6 +92,7 @@ public class BranchBlock extends ConnectingBlock {
     private boolean canConnectToLeaves(BlockState state) {
         return state.isOf(Blocks.OAK_LEAVES);
     }
+
 
     @Override
     public BlockState getPlacementState(ItemPlacementContext ctx) {

@@ -29,7 +29,10 @@
   "block.loftedmod.feywood_pressure_plate": "Feywood Pressure Plate",
   "block.loftedmod.feywood_sign": "Feywood Sign",
 
+  "item.loftedmod.vibrantite_chunk": "Vibrantite Chunk",
+
   "itemGroup.loftedmod.lofted_itemgroup": "Lofted",
+
 
   "loftedmod.blimp_destroy": "Blimp Destroyed",
   "loftedmod.blimp_creak": "Blimp Creaks"
